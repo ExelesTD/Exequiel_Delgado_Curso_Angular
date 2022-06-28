@@ -1,0 +1,2 @@
+1- ng new curso-angular (Sirve para crear un nuevo proyecto de angular)
+2- npm -v (te da la version de NPM)
