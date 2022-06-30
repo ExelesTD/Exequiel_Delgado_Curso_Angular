@@ -7,9 +7,17 @@
 </div>
 <br>
 <div class="ListaAlumnos">
-    <ul *ngIf="mostrarAlumnos">
-        <li *ngFor="let alumno of alumnos" [ngClass]="porArriba ? 'porArriba' : 'porAbajo'" (mouseover)="porArriba = true" (mouseout)="porArriba = false">
-            {{alumno}}
-        </li>
-    </ul>
+    <table *ngIf="mostrarAlumnos">
+        <tr>
+            <th *ngFor="let encabezado of encabezados" [ngClass]="porArriba ? 'porArriba' : 'porAbajo'" (mouseover)="porArriba = true" (mouseout)="porArriba = false">
+                {{encabezado}}
+            </th>
+        </tr>
+        <tr *ngFor="let alumno of alumnos" [ngClass]="porArriba ? 'porArriba' : 'porAbajo'" (mouseover)="porArriba = true" (mouseout)="porArriba = false">
+          <td>{{alumno.Nombre}}</td>
+          <td>{{alumno.Edad}}</td>
+          <td>{{alumno.Ocupacion}}</td>
+        </tr>
+    </table>
+
 </div>

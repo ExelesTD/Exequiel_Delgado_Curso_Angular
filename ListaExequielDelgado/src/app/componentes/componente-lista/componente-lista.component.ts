@@ -8,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class ComponenteListaComponent implements OnInit {
 
   alumnos = [
-    'Exequiel Delgado', 'Julian Rombola', 'Guillermo Federicchi', 'Bart Simpson', 'Pepe Garcia'
-  ]
+    { Nombre: 'Exequiel Delgado', Edad: '31', Ocupacion: 'Lider de equipo' }, 
+    { Nombre: 'Julian Rombola', Edad: '28', Ocupacion: 'Desarrollador SR' },
+    { Nombre: 'Guillermo Federicchi', Edad: '34', Ocupacion: 'Lider de equipo' },
+    { Nombre: 'Bart Simpson', Edad: '12', Ocupacion: 'Estudiante' },
+    { Nombre: 'Pepe Garcia', Edad: '50', Ocupacion: 'Gerente' }
+  ];
   
+  encabezados = ['Nombre','Edad','Ocupacion'];
+
   mostrarAlumnos = false;
   
 
