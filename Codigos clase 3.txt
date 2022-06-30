@@ -1,0 +1,2 @@
+1- npm init --yes
+2- tsc index.ts --outFile dist/index.js
