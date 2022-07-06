@@ -1,0 +1,23 @@
+<div>
+    <div style="float: left;margin-right: 10px;"><p>Los siguientes alumnos se encuentran inscriptos al curso: </p></div>
+    <div> 
+        <button *ngIf="!mostrarAlumnos" (click)="mostrarAlumnos = true">Mostrar Alumnos</button>
+        <button *ngIf="mostrarAlumnos" (click)="mostrarAlumnos = false">Ocultar Alumnos</button>
+    </div>
+</div>
+<br>
+<div class="ListaAlumnos">
+    <table *ngIf="mostrarAlumnos">
+        <tr>
+            <th *ngFor="let encabezado of encabezados" [ngClass]="porArriba ? 'porArriba' : 'porAbajo'" (mouseover)="porArriba = true" (mouseout)="porArriba = false">
+                {{encabezado}}
+            </th>
+        </tr>
+        <tr *ngFor="let alumno of alumnos" [ngClass]="porArriba ? 'porArriba' : 'porAbajo'" (mouseover)="porArriba = true" (mouseout)="porArriba = false">
+          <td>{{alumno.Nombre}}</td>
+          <td>{{alumno.Edad}}</td>
+          <td>{{alumno.Ocupacion}}</td>
+        </tr>
+    </table>
+
+</div>
