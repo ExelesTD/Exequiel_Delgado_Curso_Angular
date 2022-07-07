@@ -27,5 +27,10 @@ export class ComponenteListaComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public mostrarMensaje(NombreAgregado: string,EdadAgregada: number,OcupacionAgregada: string){
+    this.alumnos.push({Nombre: NombreAgregado, Edad: EdadAgregada.toString(), Ocupacion: OcupacionAgregada});
+    this.mostrarAlumnos = true;
+  }
+
 }
 

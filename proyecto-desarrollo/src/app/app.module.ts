@@ -7,6 +7,8 @@ import { ComponenteMenuComponent } from './componentes/componente-menu/component
 import { ComponenteToolbarComponent } from './componentes/componente-toolbar/componente-toolbar.component';
 import { ComponenteListaComponent } from './componentes/componente-lista/componente-lista.component';
 import { MiDirectivaDirective } from './directivas/mi-directiva.directive';
+import { FormularioComponent } from './componentes/formulario/formulario.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,13 @@ import { MiDirectivaDirective } from './directivas/mi-directiva.directive';
     ComponenteMenuComponent,
     ComponenteToolbarComponent,
     ComponenteListaComponent,
-    MiDirectivaDirective
+    MiDirectivaDirective,
+    FormularioComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
