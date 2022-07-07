@@ -1,0 +1,18 @@
+-- Quitar origen
+git remote remove origin
+
+--Agregar origen
+git remote add origin https://github.com/ExelesTD/Forms-Delgado.git
+git remote add origin https://github.com/ExelesTD/Exequiel_Delgado_Curso_Angular.git
+
+--Estado
+git status
+
+-- Subir
+git add
+git commit -m "ErrorSubida"
+git push origin master
+
+
+--Cambiar de rama
+git switch master
